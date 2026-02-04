@@ -1,0 +1,13 @@
+.input {
+    background-color: aquamarine;
+}
+
+.hello {
+    font-size: large;
+    background-color: darkcyan;
+    margin: 20px;
+    width: 200px;
+    border: 2px;
+    gap: 5px;
+    border-radius: 15px;
+}
