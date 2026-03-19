@@ -10,7 +10,7 @@ const Poster = (props) => {
                 {typeof props.description === 'string' && (
                     <h3>{props.description}</h3>
                 )}
-                <Author name={'Name'}/>
+                <Author name={props.author.name}/>
             </div>
         </div>
     )

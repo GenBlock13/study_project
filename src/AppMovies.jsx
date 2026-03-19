@@ -5,7 +5,7 @@ import Matrix from './media/matrix.jpeg'
 import One from './media/OnePlusOne.jpeg'
 import Terminator from './media/Terminator.jpeg'
 import FF from './media/f&f.jpeg'
-import Venom from 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSORujthlodtYagrVDg9hiv7I5CwTGzj9aASqWwN-qx_zcgyOR8j5PYw4xf-uFWtI3W5BOLbUh9BG7ZPXT6Ip-EGUYuDLEK&s&ec=121585077'
+import Venom from './media/venom.png'
 
 
 export const MOVIES = [
@@ -14,7 +14,8 @@ export const MOVIES = [
         name: 'Fast & Furious',
         description: 'Cars, speed, danger',
         img: FF,
-        thumbnail: ''
+        thumbnail: '',
+        author: { name: 'Rob Cohen' }
     },
 
     {

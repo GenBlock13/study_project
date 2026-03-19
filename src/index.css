@@ -1,23 +1,23 @@
 /* ── Theme variables ─────────────────────────────────────── */
 :root {
     --bg: #f0f2f5;
-    --surface: #ffffff;
-    --text: #1a1a2e;
+    --surface: #2aad77;
+    --text: #0e0101c2;
     --subtext: #555;
     --accent: #1d9dd2;
-    --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --card-shadow: 2px 4px 12px rgba(214, 27, 27, 0.1);
     --btn-bg: #1d9dd2;
     --btn-text: #fff;
 }
 
 .dark {
-    --bg: #1a1a2e;
-    --surface: #16213e;
-    --text: #e0e0e0;
+    --bg: #0e0e4b;
+    --surface: #596ea7;
+    --text: #df1b1b;
     --subtext: #aaa;
     --accent: #0f3460;
-    --card-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    --btn-bg: #0f3460;
+    --card-shadow: 6px 4px 22px rgba(67, 202, 89, 0.5);
+    --btn-bg: #0fa786;
     --btn-text: #e0e0e0;
 }
 
@@ -92,7 +92,7 @@ body {
 
 .movie-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(161, 29, 29, 0.2);
 }
 
 .movie-card img {
