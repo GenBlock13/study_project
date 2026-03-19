@@ -38,7 +38,14 @@ export const MOVIES = [
         description: 'Comedy',
         img: One,
         author: {name: 'Rodriges'},
-    }
+    },
+
+    {
+        id: 5,
+        name: 'Venom',
+        description: 'Comedy',
+        author: {name: 'Venom'},
+    },
 ]
 
 
