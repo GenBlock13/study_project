@@ -1,3 +1,153 @@
+/* ── Theme variables ─────────────────────────────────────── */
+:root {
+    --bg: #f0f2f5;
+    --surface: #ffffff;
+    --text: #1a1a2e;
+    --subtext: #555;
+    --accent: #1d9dd2;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --btn-bg: #1d9dd2;
+    --btn-text: #fff;
+}
+
+.dark {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --text: #e0e0e0;
+    --subtext: #aaa;
+    --accent: #0f3460;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    --btn-bg: #0f3460;
+    --btn-text: #e0e0e0;
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ── App container ───────────────────────────────────────── */
+.app-container {
+    min-height: 100vh;
+    background-color: var(--bg);
+    transition: background-color 0.3s;
+    padding: 24px 16px;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.app-header h1 {
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    color: var(--text);
+}
+
+/* ── Theme toggle button ─────────────────────────────────── */
+.theme-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-btn:hover {
+    opacity: 0.85;
+}
+
+/* ── Movie grid ──────────────────────────────────────────── */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* ── Movie card ──────────────────────────────────────────── */
+.movie-card {
+    background-color: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-card-body {
+    padding: 14px;
+}
+
+.movie-card-body h2 {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.movie-card-body h3 {
+    font-size: 0.9rem;
+    color: var(--subtext);
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.movie-card-body .author {
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+/* ── Responsive breakpoints ──────────────────────────────── */
+@media (max-width: 600px) {
+    .movies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .movie-card img {
+        height: 220px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+/* ── Legacy classes (kept for other components) ──────────── */
 .hello {
     background-color: cadetblue;
     border-radius: 15px;
@@ -6,7 +156,5 @@
     display: flex;
 }
 
-p {
-    margin-left: 25px;
-    margin-top: 25px;
-}
+.good { background-color: green; }
+.bad  { background-color: darkred; }
